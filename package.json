@@ -2,10 +2,19 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.1",
+=======
+  "homepage": "https://ara-tech-organization.github.io/Grohair-Cumbum",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+>>>>>>> gh-pages
     "@mui/material": "^7.3.1",
     "@mui/system": "^7.3.1",
     "@mui/x-date-pickers": "^8.10.0",
@@ -15,9 +24,17 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "dayjs": "^1.11.13",
+<<<<<<< HEAD
     "react": "^19.1.1",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.1",
+=======
+    "nodemailer": "^7.0.5",
+    "react": "^19.1.1",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.1",
+    "react-helmet-async": "^2.0.5",
+>>>>>>> gh-pages
     "react-router-dom": "^7.8.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.31.0",
@@ -25,11 +42,26 @@
     "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< HEAD
+=======
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  },
+>>>>>>> gh-pages
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+<<<<<<< HEAD
     "eject": "react-scripts eject"
+=======
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+>>>>>>> gh-pages
   },
   "eslintConfig": {
     "extends": [
@@ -48,10 +80,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
+=======
+>>>>>>> gh-pages
   }
 }

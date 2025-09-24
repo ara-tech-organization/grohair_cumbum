@@ -56,7 +56,11 @@ const Footer = () => {
           display="flex"
           flexDirection="column"
           alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
+<<<<<<< HEAD
           mt={{ lg: -18, sm: 0, md: -25 }}
+=======
+          mt={{ lg: -14, sm: 0, md: -25 }}
+>>>>>>> gh-pages
           ml={{md:10,lg:0}}
         >
           <Typography variant="h6" fontWeight="bold" mb={2}>
@@ -172,7 +176,11 @@ const Footer = () => {
           display="flex"
           flexDirection="column"
           alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
+<<<<<<< HEAD
           mt={{ lg: -11, md: -17 }}
+=======
+          mt={{ lg: -8, md: -17 }}
+>>>>>>> gh-pages
         >
           <Typography variant="h6" fontWeight="bold" mb={2}>
             Locations
@@ -190,7 +198,11 @@ const Footer = () => {
             }}
           >
             <iframe
+<<<<<<< HEAD
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0980272400466!2d79.70000458885497!3d12.836941699999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c30d834e7333%3A0xf1c8e3638d1aebe9!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Kanchipuram!5e0!3m2!1sen!2sin!4v1754631939220!5m2!1sen!2sin"
+=======
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.254476319338!2d77.285946574036!3d9.744498790348288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07035f760c7f35%3A0x3eae65062b69fc18!2sAdvanced%20Grohair%20%26%20Gloskin%20Clinic%20-%20Cumbum!5e0!3m2!1sen!2sin!4v1755596415874!5m2!1sen!2sin" 
+>>>>>>> gh-pages
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -1,4 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
+import { Helmet } from "react-helmet-async";
+
+>>>>>>> gh-pages
 import Footer from '../Components/Footer'
 import Touch from '../Components/Contact/Touch'
 import Header from '../Components/Header'
@@ -6,9 +11,65 @@ import Header from '../Components/Header'
 export default function Contact() {
   return (
     <div>
+<<<<<<< HEAD
       <Header/>
         <Touch/>
       <Footer/>
+=======
+      <Helmet>
+        <title>Contact Us – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
+        <meta
+          name="description"
+          content="Get expert hair regrowth and skin treatments at GroHair & GloSkin. Book your consultation today for healthy, glowing results."
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum"
+        />
+        <meta
+          property="og:description"
+          content="Get expert hair regrowth and skin treatments at GroHair & GloSkin. Book your consultation today for healthy, glowing results."
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.PUBLIC_URL}/image.jpg`}
+        />
+        <meta
+          property="og:url"
+          content="https://adgrohairgloskincumbum.in/"
+        />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:domain"
+          content="adgrocumbum.in"
+        />
+        <meta
+          property="twitter:url"
+          content="https://adgrohairgloskincumbum.in/"
+        />
+        <meta
+          name="twitter:title"
+          content="GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum"
+        />
+        <meta
+          name="twitter:description"
+          content="Get expert hair regrowth and skin treatments at GroHair & GloSkin. Book your consultation today for healthy, glowing results."
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.PUBLIC_URL}/image.jpg`}
+        />
+      </Helmet>
+
+      <Header />
+      <Touch />
+      <Footer />
+>>>>>>> gh-pages
     </div>
   )
 }

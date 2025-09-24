@@ -9,6 +9,12 @@ import {
   Divider,
   Paper,
   Stack,
+<<<<<<< HEAD
+=======
+  FormControl,
+  InputLabel,
+  Select,
+>>>>>>> gh-pages
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -79,7 +85,11 @@ function ContactForm() {
     phone: "",
     timeSlot: "",
     treatment: "",
+<<<<<<< HEAD
     message: "",
+=======
+    // message: "",
+>>>>>>> gh-pages
   });
 
   const [loading, setLoading] = React.useState(false);
@@ -92,6 +102,7 @@ function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
+<<<<<<< HEAD
     try {
       const payload = {
         firstName: values.firstName,
@@ -105,16 +116,35 @@ function ContactForm() {
 
       const response = await fetch(
         "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/naturalsAppoinment",
+=======
+    const payload = {
+      FirstName: values.firstName,
+      LastName: values.lastName,
+      Email: values.email,
+      Mobile: values.phone,
+      Date: values.date,
+      Time: values.timeSlot,
+      Treatment: values.treatment || "General",
+    };
+
+    try {
+      const res = await fetch(
+        "https://my-node-backend-cwdwchb2e2hyawa7.centralindia-01.azurewebsites.net/api/naturalsAppointment",
+>>>>>>> gh-pages
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+<<<<<<< HEAD
             Authorization: "Bearer 123",
+=======
+>>>>>>> gh-pages
           },
           body: JSON.stringify(payload),
         }
       );
 
+<<<<<<< HEAD
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -136,6 +166,28 @@ function ContactForm() {
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again later.");
+=======
+      if (res.ok) {
+        alert("✅ Your appointment has been booked successfully!");
+        setValues({
+          firstName: "",
+          lastName: "",
+          email: "",
+          date: "",
+          phone: "",
+          timeSlot: "",
+          treatment: "",
+          message: "",
+        });
+      } else {
+        const errorText = await res.text();
+        console.error("Booking failed:", errorText);
+        alert("❌ Failed to book appointment. Please try again.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("⚠️ Something went wrong. Please check your connection.");
+>>>>>>> gh-pages
     } finally {
       setLoading(false);
     }
@@ -163,7 +215,10 @@ function ContactForm() {
         <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             required
+<<<<<<< HEAD
             // label="First Name *"
+=======
+>>>>>>> gh-pages
             placeholder="Enter first name"
             fullWidth
             value={values.firstName}
@@ -173,7 +228,10 @@ function ContactForm() {
         <Grid size={{ xs: 12, md: 6 }}>
           <TextField
             required
+<<<<<<< HEAD
             // label="Last Name *"
+=======
+>>>>>>> gh-pages
             placeholder="Enter last name"
             fullWidth
             value={values.lastName}
@@ -188,7 +246,10 @@ function ContactForm() {
           <TextField
             required
             type="email"
+<<<<<<< HEAD
             // label="Email Address *"
+=======
+>>>>>>> gh-pages
             placeholder="Enter your email"
             fullWidth
             value={values.email}
@@ -205,9 +266,14 @@ function ContactForm() {
             InputLabelProps={{ shrink: true }}
             sx={{
               "& .MuiInputBase-input": {
+<<<<<<< HEAD
                 fontFamily: "Poppins, sans-serif", // 👈 always Poppins
                 color: values.date === "" ? "#adadadff" : "inherit", // gray if empty
                 // fontStyle: values.date === "" ? "italic" : "normal",
+=======
+                fontFamily: "Poppins, sans-serif",
+                color: values.date === "" ? "#adadadff" : "inherit",
+>>>>>>> gh-pages
               },
             }}
           />
@@ -220,7 +286,10 @@ function ContactForm() {
           <TextField
             required
             type="tel"
+<<<<<<< HEAD
             // label="Phone *"
+=======
+>>>>>>> gh-pages
             placeholder="Enter your phone number"
             fullWidth
             value={values.phone}
@@ -241,9 +310,14 @@ function ContactForm() {
             SelectProps={{ displayEmpty: true }}
             sx={{
               "& .MuiSelect-select": {
+<<<<<<< HEAD
                 fontFamily: "Poppins, sans-serif", // 👈 always Poppins
                 color: values.timeSlot === "" ? "#adadadff" : "inherit", // gray if empty
                 // fontStyle: values.timeSlot === "" ? "italic" : "normal",
+=======
+                fontFamily: "Poppins, sans-serif",
+                color: values.timeSlot === "" ? "#adadadff" : "inherit",
+>>>>>>> gh-pages
               },
             }}
           >
@@ -260,6 +334,7 @@ function ContactForm() {
       </Grid>
 
       {/* Treatment */}
+<<<<<<< HEAD
       <Grid container spacing={3} sx={{ mt: 6 }}>
         <Grid size={{ xs: 12 }}>
           <TextField
@@ -277,6 +352,39 @@ function ContactForm() {
         <Grid size={{ xs: 12 }}>
           <TextField
             // label="Message"
+=======
+     <Grid container spacing={3} sx={{ mt: 6 }}>
+  <Grid size={{ xs: 12 }}>
+    <TextField
+      select
+      required
+      fullWidth
+      value={values.treatment}
+      onChange={handleChange("treatment")}
+      SelectProps={{ displayEmpty: true }}
+      sx={{
+        "& .MuiSelect-select": {
+          fontFamily: "Poppins, sans-serif",
+          color: values.treatment === "" ? "#adadadff" : "inherit",
+        },
+      }}
+    >
+      <MenuItem value="" disabled>
+        Choose a treatment
+      </MenuItem>
+      <MenuItem value="Facial">Facial</MenuItem>
+      <MenuItem value="Hair Treatment">Hair Treatment</MenuItem>
+      <MenuItem value="Skin Peel">Skin Peel</MenuItem>
+    </TextField>
+  </Grid>
+</Grid>
+
+
+      {/* Message */}
+      {/* <Grid container spacing={3} sx={{ mt: 6 }}>
+        <Grid size={{ xs: 12 }}>
+          <TextField
+>>>>>>> gh-pages
             placeholder="Leave us a message..."
             fullWidth
             multiline
@@ -285,7 +393,11 @@ function ContactForm() {
             onChange={handleChange("message")}
           />
         </Grid>
+<<<<<<< HEAD
       </Grid>
+=======
+      </Grid> */}
+>>>>>>> gh-pages
 
       <Box textAlign="right" mt={6}>
         <Button
@@ -335,8 +447,13 @@ export default function ContactSection() {
             <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
               <ContactInfoBox
                 icon={<PhoneIcon />}
+<<<<<<< HEAD
                 text="+9962556789"
                 href="tel:+9962556789"
+=======
+                text="+91 962556789"
+                href="tel:+91 962556789"
+>>>>>>> gh-pages
               />
             </Grid>
 
