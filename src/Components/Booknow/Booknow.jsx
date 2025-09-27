@@ -30,16 +30,10 @@ const inputStyles = {
   },
   "& .MuiInputLabel-root": {
     color: "white",
-    "&.Mui-focused": {
-      color: "white",
-    },
+    "&.Mui-focused": { color: "white" },
   },
-  "& .MuiInputBase-input": {
-    color: "white",
-  },
-  "& svg": {
-    color: "white",
-  },
+  "& .MuiInputBase-input": { color: "white" },
+  "& svg": { color: "white" },
 };
 
 const BookAppointment = () => {
@@ -69,24 +63,23 @@ const BookAppointment = () => {
     navigate("/thankyou");
   };
 
-<<<<<<< HEAD
   const handleSubmit = async () => {
     const payload = {
-      ...formData,
-      date: date.format("YYYY-MM-DD"),
-      time: timeSlot,
-      treatment: treatment,
+      FirstName: formData.firstName,
+      LastName: formData.lastName,
+      Email: formData.email,
+      Mobile: formData.mobile,
+      Date: date.format("YYYY-MM-DD"),
+      Time: timeSlot,
+      Treatment: treatment,
     };
 
     try {
       const res = await fetch(
-        "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/naturalsAppoinment",
+        "https://my-node-backend-cwdwchb2e2hyawa7.centralindia-01.azurewebsites.net/api/naturalsAppointment",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer 123",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         }
       );
@@ -104,45 +97,6 @@ const BookAppointment = () => {
     }
   };
 
-=======
-const handleSubmit = async () => {
-  const payload = {
-    FirstName: formData.firstName,
-    LastName: formData.lastName,
-    Email: formData.email,
-    Mobile: formData.mobile,
-    Date: date.format("YYYY-MM-DD"), // dayjs formatted date
-    Time: timeSlot,
-    Treatment: treatment,
-  };
-
-  try {
-    const res = await fetch(
-     "https://my-node-backend-cwdwchb2e2hyawa7.centralindia-01.azurewebsites.net/api/naturalsAppointment",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    );
-
-    if (res.ok) {
-      setOpen(true);
-    } else {
-      const errorText = await res.text();
-      console.error("Booking failed:", errorText);
-      alert("Failed to book appointment. Please try again.");
-    }
-  } catch (err) {
-    console.error("Error:", err);
-    alert("Something went wrong. Please check your connection.");
-  }
-};
-
-
->>>>>>> gh-pages
   return (
     <Box
       sx={{
@@ -180,17 +134,8 @@ const handleSubmit = async () => {
         </Typography>
 
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-<<<<<<< HEAD
-          <Grid container spacing={2} ml={{ lg: 15, md: 11, sm: 5, xs: 1 }}>
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 5 }}
-              data-aos="fade-up"
-              width={{ lg: 210, sm: 200, xs: 300, md: 240 }}
-            >
-=======
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
->>>>>>> gh-pages
               <TextField
                 fullWidth
                 name="firstName"
@@ -201,15 +146,8 @@ const handleSubmit = async () => {
                 sx={inputStyles}
               />
             </Grid>
-<<<<<<< HEAD
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 5 }}
-              data-aos="fade-up"
-              width={{ lg: 210, sm: 200, md: 240 }}
-            >
-=======
+
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
->>>>>>> gh-pages
               <TextField
                 fullWidth
                 name="lastName"
@@ -220,16 +158,8 @@ const handleSubmit = async () => {
                 sx={inputStyles}
               />
             </Grid>
-<<<<<<< HEAD
 
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 6 }}
-              data-aos="fade-up"
-              width={{ lg: 210, sm: 200, md: 240 }}
-            >
-=======
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
->>>>>>> gh-pages
               <TextField
                 fullWidth
                 name="email"
@@ -240,15 +170,8 @@ const handleSubmit = async () => {
                 sx={inputStyles}
               />
             </Grid>
-<<<<<<< HEAD
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 6 }}
-              data-aos="fade-up"
-              width={{ lg: 210, sm: 200, md: 240 }}
-            >
-=======
+
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
->>>>>>> gh-pages
               <TextField
                 fullWidth
                 name="mobile"
@@ -259,19 +182,10 @@ const handleSubmit = async () => {
                 sx={inputStyles}
               />
             </Grid>
-<<<<<<< HEAD
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 6 }}
-              data-aos="fade-up"
-              sx={{ width: { lg: 210, sm: 200, md: 240 } }}
-            >
-              <DatePicker
-                // value={date}
-=======
+
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
               <DatePicker
                 value={date}
->>>>>>> gh-pages
                 onChange={(newDate) => setDate(newDate)}
                 slotProps={{
                   textField: {
@@ -279,60 +193,29 @@ const handleSubmit = async () => {
                     variant: "outlined",
                     InputLabelProps: {
                       shrink: true,
-                      sx: {
-                        color: "white",
-                        "&.Mui-focused": { color: "white" },
-                      },
+                      sx: { color: "white", "&.Mui-focused": { color: "white" } },
                     },
                     InputProps: {
                       sx: {
                         color: "white",
-                        "& input": {
-                          color: "white",
-                          caretColor: "white",
-                        },
-<<<<<<< HEAD
-                        "& .MuiSvgIcon-root": { color: "white" }, // calendar icon
-=======
+                        "& input": { color: "white", caretColor: "white" },
                         "& .MuiSvgIcon-root": { color: "white" },
->>>>>>> gh-pages
                       },
                     },
                     sx: {
                       "& .MuiOutlinedInput-root": {
-<<<<<<< HEAD
-                        backgroundColor: "transparent", // ✅ keep background transparent
-                        "& fieldset": {
-                          borderColor: "white", // ✅ default border
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white", // ✅ hover border white
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // ✅ focused border white
-                        },
-=======
                         backgroundColor: "transparent",
                         "& fieldset": { borderColor: "white" },
                         "&:hover fieldset": { borderColor: "white" },
                         "&.Mui-focused fieldset": { borderColor: "white" },
->>>>>>> gh-pages
                       },
                     },
                   },
                 }}
               />
             </Grid>
-<<<<<<< HEAD
 
-            <Grid
-              size={{ xs: 12, sm: 6, lg: 6 }}
-              data-aos="fade-up"
-              width={{ lg: 210, sm: 200, xs: 300, md: 240 }}
-            >
-=======
             <Grid size={{ xs: 12, sm: 6, lg: 6 }} data-aos="fade-up">
->>>>>>> gh-pages
               <TextField
                 select
                 value={timeSlot}
@@ -342,9 +225,7 @@ const handleSubmit = async () => {
                 sx={inputStyles}
                 SelectProps={{ displayEmpty: true }}
               >
-                <MenuItem value="" disabled>
-                  Select time slot
-                </MenuItem>
+                <MenuItem value="" disabled>Select time slot</MenuItem>
                 {[
                   "10.00 AM to 11:00 AM",
                   "11.00 AM to 12:00 PM",
@@ -357,26 +238,14 @@ const handleSubmit = async () => {
                   "6.00 PM to 7:00 PM",
                   "7.00 PM to 8:00 PM",
                 ].map((slot) => (
-                  <MenuItem key={slot} value={slot}>
-                    {slot}
-                  </MenuItem>
+                  <MenuItem key={slot} value={slot}>{slot}</MenuItem>
                 ))}
               </TextField>
             </Grid>
-<<<<<<< HEAD
 
-            <Grid
-              size={{ xs: 12, lg: 12 }}
-              data-aos="fade-up"
-              width={{ lg: 440, xs: 300, sm: 420, md: 500 }}
-            >
-=======
             <Grid size={{ xs: 12, lg: 12 }} data-aos="fade-up">
->>>>>>> gh-pages
               <FormControl fullWidth sx={inputStyles}>
-                <InputLabel shrink htmlFor="treatment-select">
-                  Select Treatment
-                </InputLabel>
+                <InputLabel shrink htmlFor="treatment-select">Select Treatment</InputLabel>
                 <Select
                   id="treatment-select"
                   value={treatment}
@@ -392,22 +261,7 @@ const handleSubmit = async () => {
               </FormControl>
             </Grid>
 
-            <Grid
-<<<<<<< HEAD
-              item
-              xs={12}
-=======
-              size={{ xs: 12 }}
->>>>>>> gh-pages
-              display="flex"
-              justifyContent="center"
-              data-aos="zoom-in-up"
-              mt={2}
-<<<<<<< HEAD
-              ml={{ lg: 12, sm: 15, md: 20, xs: -1 }}
-=======
->>>>>>> gh-pages
-            >
+            <Grid size={{ xs: 12 }} display="flex" justifyContent="center" data-aos="zoom-in-up" mt={2}>
               <Button
                 onClick={handleSubmit}
                 variant="contained"
@@ -419,13 +273,7 @@ const handleSubmit = async () => {
                   fontWeight: "bold",
                   fontSize: { lg: "16px", xs: "10px" },
                   borderRadius: "8px",
-<<<<<<< HEAD
-                  "&:hover": {
-                    bgcolor: "#d72b3b",
-                  },
-=======
                   "&:hover": { bgcolor: "#d72b3b" },
->>>>>>> gh-pages
                 }}
               >
                 Book Appointment
@@ -434,17 +282,8 @@ const handleSubmit = async () => {
               <Dialog open={open} onClose={handleOk}>
                 <DialogTitle>Booking Confirmed ✅</DialogTitle>
                 <DialogContent>
-                  <Typography>
-                    Your appointment has been booked successfully!
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    color="success"
-                    onClick={handleOk}
-                    sx={{ mt: 2 }}
-                  >
-                    OK
-                  </Button>
+                  <Typography>Your appointment has been booked successfully!</Typography>
+                  <Button variant="contained" color="success" onClick={handleOk} sx={{ mt: 2 }}>OK</Button>
                 </DialogContent>
               </Dialog>
             </Grid>

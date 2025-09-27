@@ -56,12 +56,8 @@ const Footer = () => {
           display="flex"
           flexDirection="column"
           alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
-<<<<<<< HEAD
-          mt={{ lg: -18, sm: 0, md: -25 }}
-=======
           mt={{ lg: -14, sm: 0, md: -25 }}
->>>>>>> gh-pages
-          ml={{md:10,lg:0}}
+          ml={{ md: 10, lg: 0 }}
         >
           <Typography variant="h6" fontWeight="bold" mb={2}>
             Links
@@ -71,7 +67,7 @@ const Footer = () => {
             display="grid"
             gridTemplateColumns={{ xs: "2fr 1fr", sm: "1fr 1fr", md: "1fr" }}
             gap={1}
-            ml={{ xs: -3, sm: 1 ,lg:0}}
+            ml={{ xs: -3, sm: 1, lg: 0 }}
             textAlign={{ xs: "center", sm: "center", md: "left" }}
           >
             {[
@@ -131,7 +127,7 @@ const Footer = () => {
           </Box>
           <Box display="flex" alignItems="center" mt={1.5}>
             <EmailIcon sx={{ color: "#fff", mr: 1 }} />
-            <Typography fontSize={{ xs: 15, md: 15,lg:'1rem' }}>
+            <Typography fontSize={{ xs: 15, md: 15, lg: "1rem" }}>
               <a
                 href="mailto:adgrohaircbm@gmail.com"
                 style={{ color: "white", textDecoration: "none" }}
@@ -140,7 +136,7 @@ const Footer = () => {
               </a>
             </Typography>
           </Box>
-          
+
           <Box display="flex" alignItems="center" mt={1.5}>
             <InstagramIcon sx={{ color: "#fff", mr: 1 }} />
             <Typography
@@ -171,16 +167,12 @@ const Footer = () => {
 
         {/* Location Map */}
         <Grid
-          size={{ xs: 12, sm: 10, md: 3}}
+          size={{ xs: 12, sm: 10, md: 3 }}
           data-aos="fade-down"
           display="flex"
           flexDirection="column"
           alignItems={{ xs: "center", sm: "center", md: "flex-start" }}
-<<<<<<< HEAD
-          mt={{ lg: -11, md: -17 }}
-=======
           mt={{ lg: -8, md: -17 }}
->>>>>>> gh-pages
         >
           <Typography variant="h6" fontWeight="bold" mb={2}>
             Locations
@@ -198,11 +190,7 @@ const Footer = () => {
             }}
           >
             <iframe
-<<<<<<< HEAD
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0980272400466!2d79.70000458885497!3d12.836941699999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c30d834e7333%3A0xf1c8e3638d1aebe9!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Kanchipuram!5e0!3m2!1sen!2sin!4v1754631939220!5m2!1sen!2sin"
-=======
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.254476319338!2d77.285946574036!3d9.744498790348288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07035f760c7f35%3A0x3eae65062b69fc18!2sAdvanced%20Grohair%20%26%20Gloskin%20Clinic%20-%20Cumbum!5e0!3m2!1sen!2sin!4v1755596415874!5m2!1sen!2sin" 
->>>>>>> gh-pages
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.254476319338!2d77.285946574036!3d9.744498790348288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07035f760c7f35%3A0x3eae65062b69fc18!2sAdvanced%20Grohair%20%26%20Gloskin%20Clinic%20-%20Cumbum!5e0!3m2!1sen!2sin!4v1755596415874!5m2!1sen!2sin"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

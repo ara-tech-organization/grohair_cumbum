@@ -115,7 +115,7 @@ const FAQSection = () => {
 
   return (
     <Box sx={{ py: 6, backgroundColor: "#fff" }}>
-      <Container>
+      <Container data-aos="fade-up">
         <Typography
           variant="subtitle2"
           color="text.secondary"

@@ -1,25 +1,9 @@
-import React from 'react'
-<<<<<<< HEAD
-=======
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 
->>>>>>> gh-pages
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
-// import SkinServicesGrid from '../Components/Services/Skin'
-import GroServicesTabs from '../Components/Services/SeviceSection'
-// import HairServices from '../Components/Services/Hair'
-<<<<<<< HEAD
-function Services() {
-  return (
-    <div>
-        
-      <Header/>
-      <GroServicesTabs/>
-      {/* <SkinServicesGrid/> */}
-      {/* < HairServices/> */}
-      <Footer/>
-=======
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
+import GroServicesTabs from '../Components/Services/SeviceSection';
 
 function Services() {
   return (
@@ -52,10 +36,7 @@ function Services() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -76,12 +57,9 @@ function Services() {
 
       <Header />
       <GroServicesTabs />
-      {/* <SkinServicesGrid/> */}
-      {/* <HairServices/> */}
       <Footer />
->>>>>>> gh-pages
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;

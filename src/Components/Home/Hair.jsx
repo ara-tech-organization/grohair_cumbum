@@ -61,9 +61,9 @@ const HairTreatmentSection = () => {
   return (
     <Box sx={{ bgcolor: "#fefdfd", py: 10, px: { xs: 2, md: 8 } }}>
 {isMobile ? (
-  <Box>
+  <Box  data-aos="fade-up">
     {/* Text above image for mobile */}
-    <Box sx={{ textAlign: "center", mb: 3 }}>
+    <Box sx={{ textAlign: "center", mb: 3 }}  data-aos="fade-up">
       <Typography variant="h6" color="text.secondary" mb={1}>
         Expert Hair Care Solutions
       </Typography>
@@ -120,7 +120,7 @@ const HairTreatmentSection = () => {
 ) : (
 
         // Desktop Layout: same as before
-        <Grid container spacing={4}>
+        <Grid container spacing={4} data-aos="fade-up">
           {/* Left: Vertical slider */}
           <Grid size={{xs:12,md:5,sm:5}} >
             <Box
@@ -156,7 +156,7 @@ const HairTreatmentSection = () => {
           </Grid>
 
           {/* Right: Content top + horizontal images bottom */}
-          <Grid size={{xs:12,md:7,sm:6}}>
+          <Grid size={{xs:12,md:7,sm:6}} data-aos="fade-up">
             <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
               {/* Top Content */}
               <Box sx={{ textAlign: { xs: "center", md: "left" } }}>

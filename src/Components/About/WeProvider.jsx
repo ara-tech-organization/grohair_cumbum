@@ -21,7 +21,7 @@ const AboutSection = () => {
         textAlign: "center",
       }}
     >
-      <Container>
+      <Container data-aos="fade-up">
         <Grid
           container
           spacing={4}

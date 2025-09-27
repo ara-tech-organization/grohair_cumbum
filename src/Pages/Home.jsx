@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { Box } from "@mui/material"; // ✅
-
-import Herosection from "../Components/Home/Herosection";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-
-import HairSection from "../Components/Home/Hair";
-import SkinServices from "../Components/Home/Skin"
-
-import About from "../Components/Home/WeProvider";
-import FAQSection from "../Components/Home/FQA";
-=======
 import React from "react";
 import { Box } from "@mui/material";
 import { Helmet } from "react-helmet-async";
@@ -22,13 +9,10 @@ import SkinServices from "../Components/Home/Skin";
 import HairSection from "../Components/Home/Hair";
 import FAQSection from "../Components/Home/FQA";
 import Footer from "../Components/Footer";
->>>>>>> gh-pages
 
 function Home() {
   return (
     <Box>
-<<<<<<< HEAD
-=======
       <Helmet>
         <title>GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
@@ -61,10 +45,7 @@ function Home() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -83,17 +64,12 @@ function Home() {
         />
       </Helmet>
 
->>>>>>> gh-pages
       <Header />
       <Herosection />
       <About />
       <SkinServices />
       <HairSection />
-<<<<<<< HEAD
-      <FAQSection/>
-=======
       <FAQSection />
->>>>>>> gh-pages
       <Footer />
     </Box>
   );

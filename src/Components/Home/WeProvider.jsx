@@ -100,7 +100,7 @@ const AboutParagraph = styled(Typography)(({ theme }) => ({
 export default function About() {
   return (
     <AboutSection>
-      <Grid container alignItems="center" justifyContent="space-between" spacing={4}>
+      <Grid container alignItems="center" justifyContent="space-between" spacing={4} data-aos="fade-up">
         
         {/* Image */}
         <Grid size={{xs:12,lg:6,md:6}} textAlign="center">

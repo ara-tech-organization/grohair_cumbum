@@ -1,21 +1,13 @@
-import React from 'react'
-<<<<<<< HEAD
-=======
+import React from "react";
 import { Helmet } from "react-helmet-async";
->>>>>>> gh-pages
 
-import Footer from '../Components/Footer'
-import BookAppointment from '../Components/Booknow/Booknow'
-import Header from '../Components/Header'
+import Header from "../Components/Header";
+import BookAppointment from "../Components/Booknow/Booknow";
+import Footer from "../Components/Footer";
 
 function Booknow() {
   return (
     <div>
-<<<<<<< HEAD
-      <Header/>
-      <BookAppointment/>
-      <Footer/>
-=======
       <Helmet>
         <title>Book Appointment – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
@@ -44,10 +36,7 @@ function Booknow() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -69,9 +58,8 @@ function Booknow() {
       <Header />
       <BookAppointment />
       <Footer />
->>>>>>> gh-pages
     </div>
-  )
+  );
 }
 
-export default Booknow
+export default Booknow;

@@ -140,7 +140,7 @@ const SkinServices = () => {
 
   return (
     <Box component="section" py={5}>
-      <Container>
+      <Container data-aos="fade-up">
         <Typography variant="h4" fontWeight="bold" textAlign="center" mb={5}>
           Skin Services
         </Typography>

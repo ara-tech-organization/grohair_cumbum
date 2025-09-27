@@ -1,37 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-// import FAQ from '../Components/About/FAQ'
-
-import Header from '../Components/Header'
-// import Section from '../Components/About/WeProvider'
-import Footer from '../Components/Footer'
-// import FAQSkin from '../Components/About/FAQSkin'
-import AboutSection from '../Components/About/WeProvider'
-import FAQSection from '../Components/About/FAQ'
-=======
 import React from "react";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import AboutSection from "../Components/About/WeProvider";
 import FAQSection from "../Components/About/FAQ";
->>>>>>> gh-pages
 
 function About() {
   return (
     <div>
-<<<<<<< HEAD
-        <Header/>
-        <AboutSection/>
-      <FAQSection/>
-      <Footer/>
-    </div>
-  )
-}
-
-export default About
-=======
       <Helmet>
         <title>About Us – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
@@ -60,10 +37,7 @@ export default About
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -91,4 +65,3 @@ export default About
 }
 
 export default About;
->>>>>>> gh-pages

@@ -77,7 +77,7 @@ const FAQSection = () => {
   };
 
   return (
-    <Box
+    <Box 
       sx={{
         py: 4,
         backgroundColor: "#f7fafd",
@@ -85,10 +85,11 @@ const FAQSection = () => {
         backgroundImage: `url(${bgimage})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center top",
+        
       }}
     >
-      <Container>
-        <Typography variant="h6" color="text.secondary" align="center" mb={3}>
+      <Container data-aos="fade-up">
+        <Typography  variant="h6" color="text.secondary" align="center" mb={3}>
           Frequently Asked Questions
         </Typography>
         <Typography variant="h4" fontWeight={600} align="center" mb={10}>
@@ -96,13 +97,13 @@ const FAQSection = () => {
         </Typography>
 
         {/* Make columns equal height */}
-        <Grid container spacing={10} alignItems="stretch">
+        <Grid container spacing={10} alignItems="stretch" data-aos="fade-up">
           {/* LEFT - GroHair */}
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}
           >
-            <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <Box data-aos="fade-up" sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
               <Typography
                 variant="h5"
                 fontWeight={600}
@@ -127,7 +128,7 @@ const FAQSection = () => {
           </Grid>
 
           {/* RIGHT - GloSkin */}
-          <Grid
+          <Grid data-aos="fade-up"
             size={{ xs: 12, md: 6 }}
             sx={{ display: "flex", flexDirection: "column" }}
           >
@@ -156,7 +157,7 @@ const FAQSection = () => {
           </Grid>
         </Grid>
 
-        <Box mt={5} textAlign="center">
+        <Box mt={5} textAlign="center" data-aos="fade-up">
           <Typography variant="body2" color="text.secondary">
             Still can’t find what you are looking for? Don’t worry, contact our
             support team.

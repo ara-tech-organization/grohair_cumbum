@@ -1,21 +1,13 @@
-import React from 'react'
-<<<<<<< HEAD
-=======
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
->>>>>>> gh-pages
-import Footer from '../Components/Footer'
-import Touch from '../Components/Contact/Touch'
-import Header from '../Components/Header'
+import Header from "../Components/Header";
+import Touch from "../Components/Contact/Touch";
+import Footer from "../Components/Footer";
 
 export default function Contact() {
   return (
     <div>
-<<<<<<< HEAD
-      <Header/>
-        <Touch/>
-      <Footer/>
-=======
       <Helmet>
         <title>Contact Us – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
@@ -44,10 +36,7 @@ export default function Contact() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -69,7 +58,6 @@ export default function Contact() {
       <Header />
       <Touch />
       <Footer />
->>>>>>> gh-pages
     </div>
-  )
+  );
 }

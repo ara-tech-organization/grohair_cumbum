@@ -49,29 +49,17 @@ const TabPane = styled(Box)({
   },
 });
 
-// Circle Card
+// Service Card
 const ServiceCard = styled(Box)(({ theme }) => ({
   background: "#fff",
-<<<<<<< HEAD
-  borderRadius: "5%",
-  overflow: "hidden",
-  width: "350px",
-  height: "300px",
-  margin: "auto",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-=======
   borderRadius: "12px",
   overflow: "hidden",
   width: "100%",
-  height: "100%",   // ✅ full height, no % mismatch
+  height: "100%",   // ✅ full height
   maxWidth: 320,
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
->>>>>>> gh-pages
   textAlign: "center",
   boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -79,31 +67,14 @@ const ServiceCard = styled(Box)(({ theme }) => ({
     transform: "translateY(-6px)",
     boxShadow: "0 12px 25px rgba(0,0,0,0.12)",
   },
-<<<<<<< HEAD
-  [theme.breakpoints.down("sm")]: {
-    width: "180px",
-    height: "180px",
-  },
 }));
 
-// Circle Image
-const CircleImage = styled("img")(({ theme }) => ({
-  width: "50%",
-  height: "40%",
-  objectFit: "cover",
-  borderRadius: "10%",
-  marginTop: theme.spacing(2),
-}));
-=======
-}));
-
-// Image
+// Service Image
 const ServiceImage = styled("img")({
   width: "100%",
   height: 200,   // ✅ fixed height so all cards align
   objectFit: "cover",
 });
->>>>>>> gh-pages
 
 // ✅ Services data with imported images
 const skinServices = [
@@ -131,29 +102,31 @@ export default function GroServicesTabs() {
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
 
   const renderCircleCards = (data) => (
-<<<<<<< HEAD
     <Grid container spacing={2} justifyContent="center">
       {data.map((service, i) => (
-        <Grid key={i} size={{xs:6,sm:6,lg:4,md:4}}  display="flex" justifyContent="center" mb={2}>
+        <Grid
+          key={i}
+          size={{ xs: 12, sm: 6, md: 4, lg: 4 }}
+          display="flex"
+          justifyContent="center"
+          mb={2}
+        >
           <ServiceCard>
-            <CircleImage src={service.img} alt={service.title} />
-            <CardContent sx={{ p: 1 }}>
-              <Typography fontSize={{lg:"1.1rem",xs:'0.9rem',sm:'1.1rem'}} fontWeight={600} color="#212529" gutterBottom>
+            <ServiceImage src={service.img} alt={service.title} />
+            <CardContent sx={{ p: 2 }}>
+              <Typography
+                fontSize={{ lg: "1.2rem", sm: "1.1rem", xs: "0.9rem" }}
+                fontWeight={600}
+                color="#212529"
+                gutterBottom
+              >
                 {service.title}
               </Typography>
-              <Typography color="#6c757d" fontSize={{lg:"0.8rem",xs:'0.6rem',sm:'0.8rem'}} px={1}>
-=======
-    <Grid container spacing={2} justifyContent="center" >
-      {data.map((service, i) => (
-        <Grid key={i} size={{xs:12,sm:6,lg:4,md:4}}  display="flex" justifyContent="center" mb={2} >
-          <ServiceCard>
-             <ServiceImage src={service.img} alt={service.title} />
-            <CardContent sx={{ p: 2}}>
-              <Typography fontSize={{lg:"1.2rem",xs:'0.9rem',sm:'1.1rem'}} fontWeight={600} color="#212529" gutterBottom>
-                {service.title}
-              </Typography>
-              <Typography color="#6c757d" fontSize={{lg:"0.9rem",xs:'0.6rem',sm:'0.8rem'}} px={1}>
->>>>>>> gh-pages
+              <Typography
+                color="#6c757d"
+                fontSize={{ lg: "0.9rem", sm: "0.8rem", xs: "0.6rem" }}
+                px={1}
+              >
                 {service.desc}
               </Typography>
             </CardContent>
@@ -165,54 +138,53 @@ export default function GroServicesTabs() {
 
   return (
     <Box sx={{ p: 2 }}>
-  {/* Section Heading */}
-  <Typography
-    component="h2"
-    className="groservices-title text-center fw-bold mb-5"
-    sx={{
-      fontWeight: "bold",
-      textAlign: "center",
-      mb: 5,
-      fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem" },
-    }}
-  >
-    Our Services
-  </Typography>
+      {/* Section Heading */}
+      <Typography
+        component="h2"
+        className="groservices-title text-center fw-bold mb-5"
+        sx={{
+          fontWeight: "bold",
+          textAlign: "center",
+          mb: 5,
+          fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem" },
+        }}
+      >
+        Our Services
+      </Typography>
 
-  {/* Tab Buttons */}
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "15px",
-      mb: 4,
-    }}
-  >
-    <TabButton
-      className={activeTab === "skin" ? "active" : ""}
-      onClick={() => setActiveTab("skin")}
-    >
-      Skin Services
-    </TabButton>
-    <TabButton
-      className={activeTab === "hair" ? "active" : ""}
-      onClick={() => setActiveTab("hair")}
-    >
-      Hair Services
-    </TabButton>
-  </Box>
+      {/* Tab Buttons */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "15px",
+          mb: 4,
+        }}
+      >
+        <TabButton
+          className={activeTab === "skin" ? "active" : ""}
+          onClick={() => setActiveTab("skin")}
+        >
+          Skin Services
+        </TabButton>
+        <TabButton
+          className={activeTab === "hair" ? "active" : ""}
+          onClick={() => setActiveTab("hair")}
+        >
+          Hair Services
+        </TabButton>
+      </Box>
 
-  {/* Skin Tab */}
-  <TabPane className={activeTab === "skin" ? "active" : ""}>
-    {renderCircleCards(skinServices)}
-  </TabPane>
+      {/* Skin Tab */}
+      <TabPane className={activeTab === "skin" ? "active" : ""}>
+        {renderCircleCards(skinServices)}
+      </TabPane>
 
-  {/* Hair Tab */}
-  <TabPane className={activeTab === "hair" ? "active" : ""}>
-    {renderCircleCards(hairServices)}
-  </TabPane>
-</Box>
-
+      {/* Hair Tab */}
+      <TabPane className={activeTab === "hair" ? "active" : ""}>
+        {renderCircleCards(hairServices)}
+      </TabPane>
+    </Box>
   );
 }

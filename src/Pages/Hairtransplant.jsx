@@ -1,22 +1,12 @@
-import React from 'react'
-<<<<<<< HEAD
-import GrohairLanding from '../Components/hairtransplant1/page1'
-// import Footer from '../Components/Footer'x
-
-
-=======
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import GrohairLanding from '../Components/hairtransplant1/page1'
-// import Footer from '../Components/Footer'
->>>>>>> gh-pages
+
+import GrohairLanding from "../Components/hairtransplant1/page1";
+// import Footer from "../Components/Footer";
 
 function Hairtransplant() {
   return (
     <div>
-<<<<<<< HEAD
-      <GrohairLanding/>
-      {/* <Footer/> */}
-=======
       <Helmet>
         <title>Hair Transplant – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
@@ -45,10 +35,7 @@ function Hairtransplant() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="adgrocumbum.in"
-        />
+        <meta property="twitter:domain" content="adgrocumbum.in" />
         <meta
           property="twitter:url"
           content="https://adgrohairgloskincumbum.in/"
@@ -69,9 +56,8 @@ function Hairtransplant() {
 
       <GrohairLanding />
       {/* <Footer /> */}
->>>>>>> gh-pages
     </div>
-  )
+  );
 }
 
-export default Hairtransplant
+export default Hairtransplant;
