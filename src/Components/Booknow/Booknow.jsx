@@ -64,6 +64,13 @@ const BookAppointment = () => {
   };
 
   const handleSubmit = async () => {
+    // ✅ Validate 10-digit numeric only
+    const mobileRegex = /^[0-9]{10}$/;
+    if (!mobileRegex.test(formData.mobile)) {
+      alert("Invalid phone number. Please enter a 10-digit number only.");
+      return;
+    }
+
     const payload = {
       FirstName: formData.firstName,
       LastName: formData.lastName,

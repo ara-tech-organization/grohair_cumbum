@@ -8,7 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';   // ✅ import
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HelmetProvider>
-    <BrowserRouter basename="/Grohair-Cumbum">
+    <BrowserRouter basename="/grohair_cumbum">
       <App />
     </BrowserRouter>
   </HelmetProvider>

@@ -9,9 +9,6 @@ import {
   Divider,
   Paper,
   Stack,
-  FormControl,
-  InputLabel,
-  Select,
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -85,6 +82,14 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ✅ Validate phone number (exactly 10 digits only)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(values.phone)) {
+      alert("❌ Invalid phone number. Please enter a valid 10-digit number.");
+      return;
+    }
+
     setLoading(true);
 
     const payload = {
@@ -147,6 +152,8 @@ function ContactForm() {
     "6 PM - 7 PM",
     "7 PM - 8 PM",
   ];
+
+  const treatments = ["Hair Treatment", "Skin Treatment"];
 
   return (
     <Box component="form" onSubmit={handleSubmit} noValidate>
@@ -249,11 +256,28 @@ function ContactForm() {
       <Grid container spacing={3} sx={{ mt: 6 }}>
         <Grid size={{ xs: 12 }}>
           <TextField
-            placeholder="Enter treatment type"
+            select
+            required
             fullWidth
             value={values.treatment}
             onChange={handleChange("treatment")}
-          />
+            SelectProps={{ displayEmpty: true }}
+            sx={{
+              "& .MuiSelect-select": {
+                fontFamily: "Poppins, sans-serif",
+                color: values.treatment === "" ? "#adadadff" : "inherit",
+              },
+            }}
+          >
+            <MenuItem value="" disabled>
+              Select Treatment Type
+            </MenuItem>
+            {treatments.map((type) => (
+              <MenuItem key={type} value={type}>
+                {type}
+              </MenuItem>
+            ))}
+          </TextField>
         </Grid>
       </Grid>
 
@@ -278,7 +302,13 @@ function ContactForm() {
           size="large"
           disabled={loading}
           endIcon={<span aria-hidden>→</span>}
-          sx={{ px: 3, py: 1.2, fontWeight: 600, boxShadow: "none", ":hover": { backgroundColor: "#c2181b" } }}
+          sx={{
+            px: 3,
+            py: 1.2,
+            fontWeight: 600,
+            boxShadow: "none",
+            ":hover": { backgroundColor: "#c2181b" },
+          }}
         >
           {loading ? "Submitting..." : "Submit Form"}
         </Button>
@@ -293,23 +323,49 @@ export default function ContactSection() {
       <CssBaseline />
       <Box component="section" sx={{ py: { xs: 5, md: 6 } }}>
         <Box sx={{ maxWidth: 1000, mx: "auto", px: 2 }}>
-          <Typography component="h2" variant="h4" align="center" fontWeight={600} sx={{ color: PRIMARY, mb: 3 }}>
+          <Typography
+            component="h2"
+            variant="h4"
+            align="center"
+            fontWeight={600}
+            sx={{ color: PRIMARY, mb: 3 }}
+          >
             Let’s Get In Touch
           </Typography>
 
-          <Grid container spacing={2.5} alignItems="stretch" justifyContent="space-between" sx={{ mb: 3, textAlign: "center" }}>
+          <Grid
+            container
+            spacing={2.5}
+            alignItems="stretch"
+            justifyContent="space-between"
+            sx={{ mb: 3, textAlign: "center" }}
+          >
             <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
-              <ContactInfoBox icon={<PhoneIcon />} text="+91 962556789" href="tel:+91 962556789" />
+              <ContactInfoBox
+                icon={<PhoneIcon />}
+                text="+91 962556789"
+                href="tel:+91 962556789"
+              />
             </Grid>
             <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
-              <ContactInfoBox icon={<EmailIcon />} text="adgrohaircbm@gmail.com" href="mailto:adgrohaircbm@gmail.com" />
+              <ContactInfoBox
+                icon={<EmailIcon />}
+                text="adgrohaircbm@gmail.com"
+                href="mailto:adgrohaircbm@gmail.com"
+              />
             </Grid>
             <Grid size={{ xs: 12, sm: 4, lg: 4 }}>
               <ContactInfoBox
                 icon={<LocationOnIcon />}
                 text={
-                  <a href="https://maps.app.goo.gl/GQ71mALQbhEBbyvw9" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-                    First Floor, LF Rd, Opp Urban Hospital, Nethaji Nagar, Pathirakaliamman Kovil, Cumbum, Tamil Nadu 625516
+                  <a
+                    href="https://maps.app.goo.gl/GQ71mALQbhEBbyvw9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    First Floor, LF Rd, Opp Urban Hospital, Nethaji Nagar,
+                    Pathirakaliamman Kovil, Cumbum, Tamil Nadu 625516
                   </a>
                 }
               />
@@ -318,7 +374,17 @@ export default function ContactSection() {
 
           <Divider sx={{ my: 4, backgroundColor: "#ccc" }} />
 
-          <Paper elevation={0} sx={{ maxWidth: 850, mx: "auto", p: { xs: 2.5, sm: 3, md: 4 }, borderRadius: 3, boxShadow: "0 0 30px rgba(0,0,0,0.05)", backgroundColor: "#fff" }}>
+          <Paper
+            elevation={0}
+            sx={{
+              maxWidth: 850,
+              mx: "auto",
+              p: { xs: 2.5, sm: 3, md: 4 },
+              borderRadius: 3,
+              boxShadow: "0 0 30px rgba(0,0,0,0.05)",
+              backgroundColor: "#fff",
+            }}
+          >
             <ContactForm />
           </Paper>
         </Box>
