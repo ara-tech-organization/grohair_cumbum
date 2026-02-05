@@ -10,17 +10,10 @@ const ThankYou = () => {
     // Open popup when page loads
     setOpen(true);
 
-    // ✅ Google Ads Conversion Tracking (Skin lead)
+    // ✅ Google Ads Conversion Tracking (Cumbum)
     if (window.gtag) {
       window.gtag("event", "conversion", {
-        send_to: "AW-16777025590/dwI5CO7ah4QbELaw9L8-",
-        value: 500.0,
-        currency: "INR",
-      });
-
-      // ✅ Google Ads Conversion Tracking (Hair lead)
-      window.gtag("event", "conversion", {
-        send_to: "AW-17577014731/AsQjCKaMzJ8bEMvrr71B",
+        send_to: "AW-16903855981/gQC9CJf_-fEbEO2-sfw-",
         value: 500.0,
         currency: "INR",
       });
