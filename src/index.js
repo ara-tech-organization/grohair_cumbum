@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter basename="/grohair_cumbum">
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </HelmetProvider>

@@ -93,22 +93,25 @@ function ContactForm() {
     setLoading(true);
 
     const payload = {
-      FirstName: values.firstName,
-      LastName: values.lastName,
-      Email: values.email,
-      Mobile: values.phone,
-      Date: values.date,
-      Time: values.timeSlot,
-      Treatment: values.treatment || "General",
-      Message: values.message,
+      firstName: values.firstName,
+      lastName: values.lastName,
+      email: values.email,
+      mobile: values.phone,
+      date: values.date,
+      time: values.timeSlot,
+      message: values.treatment || "General",
+      city: "Cumbum",
     };
 
     try {
       const res = await fetch(
-        "https://my-node-backend-cwdwchb2e2hyawa7.centralindia-01.azurewebsites.net/api/naturalsAppointment",
+        "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growandglowDharmapuriForm01",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer 123",
+          },
           body: JSON.stringify(payload),
         }
       );

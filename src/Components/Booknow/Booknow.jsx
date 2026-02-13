@@ -9,9 +9,6 @@ import {
   Select,
   InputLabel,
   FormControl,
-  Dialog,
-  DialogTitle,
-  DialogContent,
 } from "@mui/material";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -47,7 +44,6 @@ const BookAppointment = () => {
     mobile: "",
   });
 
-  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -56,11 +52,6 @@ const BookAppointment = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleOk = () => {
-    setOpen(false);
-    navigate("/thankyou");
   };
 
   const handleSubmit = async () => {
@@ -72,27 +63,31 @@ const BookAppointment = () => {
     }
 
     const payload = {
-      FirstName: formData.firstName,
-      LastName: formData.lastName,
-      Email: formData.email,
-      Mobile: formData.mobile,
-      Date: date.format("YYYY-MM-DD"),
-      Time: timeSlot,
-      Treatment: treatment,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      mobile: formData.mobile,
+      date: date.format("YYYY-MM-DD"),
+      time: timeSlot,
+      message: treatment,
+      city: "Cumbum",
     };
 
     try {
       const res = await fetch(
-        "https://my-node-backend-cwdwchb2e2hyawa7.centralindia-01.azurewebsites.net/api/naturalsAppointment",
+        "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growandglowDharmapuriForm01",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer 123",
+          },
           body: JSON.stringify(payload),
         }
       );
 
       if (res.ok) {
-        setOpen(true);
+        navigate("/thankyou");
       } else {
         const errorText = await res.text();
         console.error("Booking failed:", errorText);
@@ -151,6 +146,7 @@ const BookAppointment = () => {
                 onChange={handleChange}
                 variant="outlined"
                 sx={inputStyles}
+                required
               />
             </Grid>
 
@@ -163,6 +159,7 @@ const BookAppointment = () => {
                 onChange={handleChange}
                 variant="outlined"
                 sx={inputStyles}
+                required
               />
             </Grid>
 
@@ -175,6 +172,7 @@ const BookAppointment = () => {
                 onChange={handleChange}
                 variant="outlined"
                 sx={inputStyles}
+                required
               />
             </Grid>
 
@@ -187,6 +185,7 @@ const BookAppointment = () => {
                 onChange={handleChange}
                 variant="outlined"
                 sx={inputStyles}
+                required
               />
             </Grid>
 
@@ -198,6 +197,7 @@ const BookAppointment = () => {
                   textField: {
                     fullWidth: true,
                     variant: "outlined",
+                    required: true,
                     InputLabelProps: {
                       shrink: true,
                       sx: { color: "white", "&.Mui-focused": { color: "white" } },
@@ -229,6 +229,7 @@ const BookAppointment = () => {
                 onChange={(e) => setTimeSlot(e.target.value)}
                 fullWidth
                 variant="outlined"
+                required
                 sx={inputStyles}
                 SelectProps={{ displayEmpty: true }}
               >
@@ -260,10 +261,24 @@ const BookAppointment = () => {
                   label="Select Treatment"
                   displayEmpty
                   notched
+                  required
                 >
-                  <MenuItem value="Facial">Facial</MenuItem>
-                  <MenuItem value="Hair Treatment">Hair Treatment</MenuItem>
-                  <MenuItem value="Skin Peel">Skin Peel</MenuItem>
+                  <MenuItem value="" disabled>Select Treatment</MenuItem>
+                  <MenuItem disabled sx={{ fontWeight: "bold", opacity: 1 }}>— Skin Services —</MenuItem>
+                  <MenuItem value="Skin Brightening Treatment">Skin Brightening Treatment</MenuItem>
+                  <MenuItem value="Q-Switch">Q-Switch</MenuItem>
+                  <MenuItem value="Hydra Facial">Hydra Facial</MenuItem>
+                  <MenuItem value="Laser Hair Removal">Laser Hair Removal</MenuItem>
+                  <MenuItem value="RF Anti Aging Facial">RF Anti Aging Facial</MenuItem>
+                  <MenuItem value="Botox">Botox</MenuItem>
+                  <MenuItem value="Microblading">Microblading</MenuItem>
+                  <MenuItem value="Wart Removal">Wart Removal</MenuItem>
+                  <MenuItem disabled sx={{ fontWeight: "bold", opacity: 1 }}>— Hair Services —</MenuItem>
+                  <MenuItem value="Scalp MicroPigmentation">Scalp MicroPigmentation</MenuItem>
+                  <MenuItem value="Eyebrow Transplantation">Eyebrow Transplantation</MenuItem>
+                  <MenuItem value="Stem X Pro">Stem X Pro</MenuItem>
+                  <MenuItem value="Meso Therapy">Meso Therapy</MenuItem>
+                  <MenuItem value="Oxygen Laser Therapy">Oxygen Laser Therapy</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -286,13 +301,6 @@ const BookAppointment = () => {
                 Book Appointment
               </Button>
 
-              <Dialog open={open} onClose={handleOk}>
-                <DialogTitle>Booking Confirmed ✅</DialogTitle>
-                <DialogContent>
-                  <Typography>Your appointment has been booked successfully!</Typography>
-                  <Button variant="contained" color="success" onClick={handleOk} sx={{ mt: 2 }}>OK</Button>
-                </DialogContent>
-              </Dialog>
             </Grid>
           </Grid>
         </LocalizationProvider>
