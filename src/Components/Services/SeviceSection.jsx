@@ -8,15 +8,15 @@ import qSwitch from "../assets/s2.png";
 import hydrafacial from "../assets/s3.jpeg";
 import hairLaser from "../assets/s4.jpeg";
 import rf from "../assets/s5.jpeg";
-import botox from "../assets/H3.jpeg";
+import botox from "../assets/H3.png";
 import micro from "../assets/s2.png";
 import wartRemoval from "../assets/2.jpg";
 
-import scalpMicropigmentation from "../assets/H1.jpeg";
+import scalpMicropigmentation from "../assets/H1.png";
 import eyebrowTransplant from "../assets/H2.jpeg";
-import stemXPro from "../assets/H3.jpeg";
+import stemXPro from "../assets/H3.png";
 import mesotherapy from "../assets/H4.jpeg";
-import oxygenLaserTherapy from "../assets/H5.jpeg";
+import oxygenLaserTherapy from "../assets/H5.png";
 
 // Styled MUI Button
 const TabButton = styled(Button)(({ theme }) => ({
