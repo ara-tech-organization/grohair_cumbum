@@ -4,19 +4,19 @@ import { styled } from "@mui/system";
 
 // ✅ Imported images
 import skinBrightening from "../assets/s1.png";
-import qSwitch from "../assets/s2.png";
+import qSwitch from "../assets/s7.png";
 import hydrafacial from "../assets/s3.jpeg";
 import hairLaser from "../assets/s4.jpeg";
 import rf from "../assets/s5.jpeg";
 import botox from "../assets/s6.png";
 import micro from "../assets/s2.png";
-import wartRemoval from "../assets/2.jpg";
+import wartRemoval from "../assets/s8.png";
 
 import scalpMicropigmentation from "../assets/H1.png";
 import eyebrowTransplant from "../assets/H2.jpeg";
 import stemXPro from "../assets/H3.png";
 import mesotherapy from "../assets/H4.png";
-import oxygenLaserTherapy from "../assets/H5.png";
+import oxygenLaserTherapy from "../assets/H6.png";
 
 // Styled MUI Button
 const TabButton = styled(Button)(({ theme }) => ({

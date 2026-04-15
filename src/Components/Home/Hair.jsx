@@ -14,7 +14,7 @@ const specialties = [
     id: 1,
     title: "Scalp Micropigmentation",
     description: "Creates denser hair.",
-    image: require("../assets/H1.jpeg"),
+    image: require("../assets/H1.png"),
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const specialties = [
     id: 3,
     title: "Stem X Pro Therapy",
     description: "Hair rejuvenation.",
-    image: require("../assets/H3.jpeg"),
+    image: require("../assets/H3.png"),
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const specialties = [
     id: 5,
     title: "Oxygen Laser Therapy",
     description: "Laser + oxygen infusion.",
-    image: require("../assets/H5.jpeg"),
+    image: require("../assets/H6.png"),
   },
 ];
 
