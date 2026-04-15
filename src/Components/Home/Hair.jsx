@@ -32,7 +32,7 @@ const specialties = [
     id: 4,
     title: "Meso Therapy",
     description: "Nutrients for scalp.",
-    image: require("../assets/H4.jpeg"),
+    image: require("../assets/H4.png"),
   },
   {
     id: 5,

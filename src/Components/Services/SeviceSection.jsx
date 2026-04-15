@@ -8,14 +8,14 @@ import qSwitch from "../assets/s2.png";
 import hydrafacial from "../assets/s3.jpeg";
 import hairLaser from "../assets/s4.jpeg";
 import rf from "../assets/s5.jpeg";
-import botox from "../assets/H3.png";
+import botox from "../assets/s6.png";
 import micro from "../assets/s2.png";
 import wartRemoval from "../assets/2.jpg";
 
 import scalpMicropigmentation from "../assets/H1.png";
 import eyebrowTransplant from "../assets/H2.jpeg";
 import stemXPro from "../assets/H3.png";
-import mesotherapy from "../assets/H4.jpeg";
+import mesotherapy from "../assets/H4.png";
 import oxygenLaserTherapy from "../assets/H5.png";
 
 // Styled MUI Button
@@ -99,7 +99,7 @@ const hairServices = [
 export default function GroServicesTabs() {
   const [activeTab, setActiveTab] = useState("skin");
   const theme = useTheme();
-  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  useMediaQuery(theme.breakpoints.down("sm"));
 
   const renderCircleCards = (data) => (
     <Grid container spacing={2} justifyContent="center">
