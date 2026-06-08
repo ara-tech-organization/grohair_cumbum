@@ -12,7 +12,7 @@ function Services() {
         <title>Our Services – GroHair & GloSkin – Advanced Hair & Skin Care in Cumbum</title>
         <meta
           name="description"
-          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair removal, and advanced skin treatments."
+          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair reduction, and advanced skin treatments."
         />
 
         {/* Open Graph / Facebook */}
@@ -22,7 +22,7 @@ function Services() {
         />
         <meta
           property="og:description"
-          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair removal, and advanced skin treatments."
+          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair reduction, and advanced skin treatments."
         />
         <meta
           property="og:image"
@@ -47,7 +47,7 @@ function Services() {
         />
         <meta
           name="twitter:description"
-          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair removal, and advanced skin treatments."
+          content="Explore the hair and skin care services offered by GroHair & GloSkin, including hair transplant, PRP therapy, laser hair reduction, and advanced skin treatments."
         />
         <meta
           name="twitter:image"

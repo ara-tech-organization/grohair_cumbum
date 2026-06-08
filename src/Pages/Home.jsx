@@ -21,7 +21,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="hair treatment, skin care, PRP therapy, hair transplant, laser hair removal, GroHair & GloSkin"
+          content="hair treatment, skin care, PRP therapy, hair transplant, laser hair reduction, GroHair & GloSkin"
         />
 
         {/* Open Graph / Facebook */}

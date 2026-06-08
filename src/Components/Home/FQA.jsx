@@ -53,7 +53,7 @@ const gloSkinFaqs = [
     a: "Yes, we offer advanced solutions for acne, pigmentation, and uneven skin tone, tailored to your specific concerns.",
   },
   {
-    q: "Is laser hair removal available at GloSkin?",
+    q: "Is laser hair reduction available at GloSkin?",
     a: "Yes! We use FDA-approved laser technology for long-term hair reduction that’s safe for all skin types.",
   },
 ];

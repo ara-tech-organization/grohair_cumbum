@@ -14,13 +14,13 @@ const specialties = [
     id: 1,
     title: "Scalp Micropigmentation",
     description: "Creates denser hair.",
-    image: require("../assets/H1.png"),
+    image: require("../assets/Scalp micropigmentation.png"),
   },
   {
     id: 2,
-    title: "Eyebrow Transplant",
+    title: "Eyebrow Transplantation",
     description: "Redefine your natural look.",
-    image: require("../assets/H2.jpeg"),
+    image: require("../assets/Eyebrow-tranplant.png"),
   },
   {
     id: 3,

@@ -3,9 +3,9 @@ import { Box, Container, Grid, Typography, Button, useMediaQuery } from "@mui/ma
 import { styled } from "@mui/system";
 import Slider from "react-slick";
 import microImg from "../assets/s1.png";
-import wartImg from "../assets/s2.png";
-import laserImg from "../assets/s3.jpeg";
-import hydraImg from "../assets/s4.jpeg";
+import wartImg from "../assets/waterremoval.png";
+import laserImg from "../assets/04. Laser Hair Reduction.jpg";
+import hydraImg from "../assets/Hydrafacial.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -111,7 +111,7 @@ const SkinServices = () => {
       img: wartImg,
     },
     {
-      title: "Laser Hair Removal",
+      title: "Laser Hair Reduction",
       desc: "Say goodbye to unwanted hair with our safe and long-lasting laser treatments.",
       img: laserImg,
     },

@@ -268,7 +268,7 @@ const BookAppointment = () => {
                   <MenuItem value="Skin Brightening Treatment">Skin Brightening Treatment</MenuItem>
                   <MenuItem value="Q-Switch">Q-Switch</MenuItem>
                   <MenuItem value="Hydra Facial">Hydra Facial</MenuItem>
-                  <MenuItem value="Laser Hair Removal">Laser Hair Removal</MenuItem>
+                  <MenuItem value="Laser Hair Reduction">Laser Hair Reduction</MenuItem>
                   <MenuItem value="RF Anti Aging Facial">RF Anti Aging Facial</MenuItem>
                   <MenuItem value="Botox">Botox</MenuItem>
                   <MenuItem value="Microblading">Microblading</MenuItem>

@@ -5,15 +5,15 @@ import { styled } from "@mui/system";
 // ✅ Imported images
 import skinBrightening from "../assets/s1.png";
 import qSwitch from "../assets/s7.png";
-import hydrafacial from "../assets/s3.jpeg";
-import hairLaser from "../assets/s4.jpeg";
+import hydrafacial from "../assets/Hydrafacial.png";
+import hairLaser from "../assets/04. Laser Hair Reduction.jpg";
 import rf from "../assets/s5.jpeg";
 import botox from "../assets/s6.png";
 import micro from "../assets/s2.png";
-import wartRemoval from "../assets/s8.png";
+import wartRemoval from "../assets/waterremoval.png";
 
-import scalpMicropigmentation from "../assets/H1.png";
-import eyebrowTransplant from "../assets/H2.jpeg";
+import scalpMicropigmentation from "../assets/Scalp micropigmentation.png";
+import eyebrowTransplant from "../assets/Eyebrow-tranplant.png";
 import stemXPro from "../assets/H3.png";
 import mesotherapy from "../assets/H4.png";
 import oxygenLaserTherapy from "../assets/H6.png";
@@ -81,7 +81,7 @@ const skinServices = [
   { img: skinBrightening, title: "Skin Brightening Treatment", desc: "Reduce tanning and dullness to reveal a clearer, even-toned complexion." },
   { img: qSwitch, title: "Q-Switch", desc: "Laser precision treatment for pigmentation, melasma, and sun damage." },
   { img: hydrafacial, title: "Hydra Facial", desc: "Deep exfoliation and hydration for a radiant and refreshed look." },
-  { img: hairLaser, title: "Laser Hair Removal", desc: "Long-lasting hair reduction with advanced laser technology." },
+  { img: hairLaser, title: "Laser Hair Reduction", desc: "Long-lasting hair reduction with advanced laser technology." },
   { img: rf, title: "RF Anti Aging Facial", desc: "Tightens skin and smooths wrinkles using radio frequency tech." },
   { img: botox, title: "Botox", desc: "Reduces lines and wrinkles for a youthful, smoother appearance." },
   { img: micro, title: "Microblading", desc: "Semi-permanent brow sculpting for bold, natural-looking arches." },
