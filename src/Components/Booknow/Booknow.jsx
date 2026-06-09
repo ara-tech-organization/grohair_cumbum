@@ -266,7 +266,7 @@ const BookAppointment = () => {
                   <MenuItem value="" disabled>Select Treatment</MenuItem>
                   <MenuItem disabled sx={{ fontWeight: "bold", opacity: 1 }}>— Skin Services —</MenuItem>
                   <MenuItem value="Skin Brightening Treatment">Skin Brightening Treatment</MenuItem>
-                  <MenuItem value="Q-Switch">Q-Switch</MenuItem>
+                  <MenuItem value="Q-Switch Laser">Q-Switch Laser</MenuItem>
                   <MenuItem value="Hydra Facial">Hydra Facial</MenuItem>
                   <MenuItem value="Laser Hair Reduction">Laser Hair Reduction</MenuItem>
                   <MenuItem value="RF Anti Aging Facial">RF Anti Aging Facial</MenuItem>
@@ -276,7 +276,7 @@ const BookAppointment = () => {
                   <MenuItem disabled sx={{ fontWeight: "bold", opacity: 1 }}>— Hair Services —</MenuItem>
                   <MenuItem value="Scalp MicroPigmentation">Scalp MicroPigmentation</MenuItem>
                   <MenuItem value="Eyebrow Transplantation">Eyebrow Transplantation</MenuItem>
-                  <MenuItem value="Stem X Pro">Stem X Pro</MenuItem>
+                  <MenuItem value="Stem X 27">Stem X 27</MenuItem>
                   <MenuItem value="Meso Therapy">Meso Therapy</MenuItem>
                   <MenuItem value="Oxygen Laser Therapy">Oxygen Laser Therapy</MenuItem>
                 </Select>

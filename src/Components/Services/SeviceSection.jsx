@@ -9,7 +9,7 @@ import hydrafacial from "../assets/Hydrafacial.png";
 import hairLaser from "../assets/04. Laser Hair Reduction.jpg";
 import rf from "../assets/s5.jpeg";
 import botox from "../assets/s6.png";
-import micro from "../assets/s2.png";
+import micro from "../assets/Microblading.png";
 import wartRemoval from "../assets/waterremoval.png";
 
 import scalpMicropigmentation from "../assets/Scalp micropigmentation.png";
@@ -79,7 +79,7 @@ const ServiceImage = styled("img")({
 // ✅ Services data with imported images
 const skinServices = [
   { img: skinBrightening, title: "Skin Brightening Treatment", desc: "Reduce tanning and dullness to reveal a clearer, even-toned complexion." },
-  { img: qSwitch, title: "Q-Switch", desc: "Laser precision treatment for pigmentation, melasma, and sun damage." },
+  { img: qSwitch, title: "Q-Switch Laser", desc: "Laser precision treatment for pigmentation, melasma, and sun damage." },
   { img: hydrafacial, title: "Hydra Facial", desc: "Deep exfoliation and hydration for a radiant and refreshed look." },
   { img: hairLaser, title: "Laser Hair Reduction", desc: "Long-lasting hair reduction with advanced laser technology." },
   { img: rf, title: "RF Anti Aging Facial", desc: "Tightens skin and smooths wrinkles using radio frequency tech." },
@@ -91,7 +91,7 @@ const skinServices = [
 const hairServices = [
   { img: scalpMicropigmentation, title: "Scalp MicroPigmentation", desc: "Replicates natural follicles for a fuller scalp look — ideal for bald spots." },
   { img: eyebrowTransplant, title: "Eyebrow Transplantation", desc: "Restores fuller, symmetrical brows using hair follicle transplants." },
-  { img: stemXPro, title: "Stem X Pro", desc: "Stem cell-enriched formula to boost hair regrowth and follicle health." },
+  { img: stemXPro, title: "Stem X 27", desc: "Stem cell-enriched formula to boost hair regrowth and follicle health." },
   { img: mesotherapy, title: "Meso Therapy", desc: "Injects nutrients into the scalp to nourish roots and reduce hair fall." },
   { img: oxygenLaserTherapy, title: "Oxygen Laser Therapy", desc: "Combines oxygen infusion with laser energy to improve scalp health." },
 ];

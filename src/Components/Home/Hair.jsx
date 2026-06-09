@@ -24,7 +24,7 @@ const specialties = [
   },
   {
     id: 3,
-    title: "Stem X Pro Therapy",
+    title: "Stem X 27 Therapy",
     description: "Hair rejuvenation.",
     image: require("../assets/H3.png"),
   },
