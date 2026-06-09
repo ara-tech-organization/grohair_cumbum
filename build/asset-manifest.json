@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.ddea2b25.css",
-    "main.js": "/static/js/main.98427d1a.js",
+    "main.js": "/static/js/main.1c17f87e.js",
     "static/media/H4.png": "/static/media/H4.14448355385c7490e0ed.png",
-    "static/media/s2.png": "/static/media/s2.a4baaaa15da79759b137.png",
     "static/media/Scalp micropigmentation.png": "/static/media/Scalp micropigmentation.abcba0a5a54266cee029.png",
+    "static/media/Microblading.png": "/static/media/Microblading.24edf40da72e2d0c7932.png",
     "static/media/waterremoval.png": "/static/media/waterremoval.3397714d3be65eb0fdb0.png",
     "static/media/Eyebrow-tranplant.png": "/static/media/Eyebrow-tranplant.e47398a4f6a172fe36a6.png",
     "static/media/Hydrafacial.png": "/static/media/Hydrafacial.637b9d9e4817974efb2d.png",
@@ -34,10 +34,10 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "main.ddea2b25.css.map": "/static/css/main.ddea2b25.css.map",
-    "main.98427d1a.js.map": "/static/js/main.98427d1a.js.map"
+    "main.1c17f87e.js.map": "/static/js/main.1c17f87e.js.map"
   },
   "entrypoints": [
     "static/css/main.ddea2b25.css",
-    "static/js/main.98427d1a.js"
+    "static/js/main.1c17f87e.js"
   ]
 }
